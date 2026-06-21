@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link
+rel="stylesheet"
+href="style.css"
+/>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const count = localStorage.getItem("ecommerce_cart")
+			? JSON.parse(localStorage.getItem("ecommerce_cart")).reduce(
+					(sum, item) => sum + item.quantity,
+					0
+				)
+			: 0;
+		document.querySelectorAll("#cartCount").forEach((el) => {
+			el.innerText = count;
+		});
+	});
+</script>
+
+</head>
+
+<body>
+  <nav>
+    <h2>TaskFlow Store</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="login.html" class="active">Login</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Login to continue</h1>
+      <p>Sign in to place orders, view your cart, and checkout securely.</p>
+    </div>
+  </section>
+
+  <div class="card">
+    <h2>Login</h2>
+    <label for="email">Email</label>
+    <input id="email" placeholder="Email" />
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p style="margin-top:18px; color:#cfd8ff;">New user? <a href="register.html" style="color:#80c6ff;">Create an account</a></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

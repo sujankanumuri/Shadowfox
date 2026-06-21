@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>TaskFlow Store</title>
+
+<link
+rel="stylesheet"
+href="style.css"
+>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const cartCount = document.getElementById("cartCount");
+		if (cartCount) {
+			cartCount.innerText = localStorage.getItem("ecommerce_cart")
+				? JSON.parse(localStorage.getItem("ecommerce_cart")).reduce(
+						(sum, item) => sum + item.quantity,
+						0
+					)
+				: 0;
+		}
+	});
+</script>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>
+TaskFlow Store
+</h2>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="cart.html">Cart <span id="cartCount">0</span></a>
+
+<a href="login.html">Login</a>
+
+<a href="admin.html">Admin</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+  <div class="container hero-copy">
+    <p class="eyebrow">Trusted marketplace</p>
+    <h1>Premium Shopping Experience</h1>
+    <p class="hero-tagline">Discover trending electronics, fashion, home essentials, and more with fast delivery and secure checkout.</p>
+    <div class="hero-actions">
+      <a href="products.html" class="btn">Shop Now</a>
+      <a href="cart.html" class="btn btn-secondary">View Cart</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section container">
+  <div class="section-heading">
+    <p class="eyebrow">Featured Deals</p>
+    <h2>Hot picks for you</h2>
+  </div>
+
+  <div class="featured-grid">
+    <article class="deal-card">
+      <span class="deal-badge">Best Seller</span>
+      <h3>Smart Audio</h3>
+      <p>Top-rated wireless headphones and speakers with premium sound and fast delivery.</p>
+      <a href="products.html" class="deal-link">Shop Audio</a>
+    </article>
+    <article class="deal-card">
+      <span class="deal-badge">Limited Offer</span>
+      <h3>Powerful Gaming Gear</h3>
+      <p>High-performance mice, keyboards, and accessories for your next-level setup.</p>
+      <a href="products.html" class="deal-link">Shop Gaming</a>
+    </article>
+    <article class="deal-card">
+      <span class="deal-badge">Trending</span>
+      <h3>Travel Essentials</h3>
+      <p>Durable backpacks and accessories designed for seamless trips and daily commutes.</p>
+      <a href="products.html" class="deal-link">Shop Travel</a>
+    </article>
+  </div>
+</section>
+
+</body>
+
+</html>

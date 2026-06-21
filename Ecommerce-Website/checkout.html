@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <h2>Order Confirmation</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="login.html">Login</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Order Confirmed</h1>
+      <p>Your order is complete and ready to ship.</p>
+    </div>
+  </section>
+
+  <div class="card">
+    <h2>Thank you for your purchase</h2>
+    <p id="orderInfo">Retrieving order details...</p>
+    <a href="products.html" class="btn">Back to Shop</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('orderId');
+    const el = document.getElementById('orderInfo');
+    if (id) {
+      el.innerHTML = `Your order ID is <strong>${id}</strong>. We'll email you a receipt.`;
+    } else {
+      el.innerText = 'No order id provided.';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link
+rel="stylesheet"
+href="style.css"
+/>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const count = localStorage.getItem("ecommerce_cart")
+			? JSON.parse(localStorage.getItem("ecommerce_cart")).reduce(
+					(sum, item) => sum + item.quantity,
+					0
+				)
+			: 0;
+		document.querySelectorAll("#cartCount").forEach((el) => {
+			el.innerText = count;
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+<nav>
+  <h2>Shop</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="cart.html">Cart <span id="cartCount">0</span></a>
+    <a href="login.html">Login</a>
+    <a href="admin.html">Admin</a>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Discover our featured products</h1>
+    <p>Browse the latest premium goods, add them to your cart, and checkout securely.</p>
+  </div>
+</section>
+
+<section class="product-toolbar container">
+  <input id="productSearch" class="search-input" type="search" placeholder="Search products, brands, or categories" />
+</section>
+
+<div id="products" class="grid"></div>
+
+<div id="productModal" class="modal hidden">
+  <div class="modal-backdrop" onclick="closeProductModal()"></div>
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeProductModal()">×</button>
+    <img id="modalImage" class="modal-image" src="" alt="Product image" />
+    <div class="modal-body">
+      <div class="modal-labels">
+        <span id="modalCategory" class="product-category"></span>
+        <span id="modalTag" class="product-tag"></span>
+        <span id="modalRating" class="product-rating"></span>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDetails" class="modal-details"></p>
+      <div id="modalSpecs" class="modal-specs"></div>
+      <div class="modal-price-row">
+        <span id="modalPrice" class="product-price"></span>
+        <span id="modalDelivery" class="product-delivery"></span>
+      </div>
+      <div class="modal-actions">
+        <button id="modalAddButton" class="btn">Add to Cart</button>
+        <a href="cart.html" class="btn btn-secondary">Go to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

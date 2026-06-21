@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css" />
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const count = localStorage.getItem("ecommerce_cart")
+      ? JSON.parse(localStorage.getItem("ecommerce_cart")).reduce((sum, item) => sum + item.quantity, 0)
+      : 0;
+    document.querySelectorAll("#cartCount").forEach((el) => {
+      el.innerText = count;
+    });
+  });
+</script>
+</head>
+
+<body>
+<nav>
+  <h2>Your Cart</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html" class="active">Cart</a>
+    <a href="login.html">Login</a>
+    <a href="admin.html">Admin</a>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Your Shopping Cart</h1>
+    <p>Review your items before checkout. Remove products at any time.</p>
+  </div>
+</section>
+
+<div id="cart" class="container"></div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

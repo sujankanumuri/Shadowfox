@@ -1,0 +1,182 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Premium Headphones",
+    "price": 3999,
+    "description": "Wireless noise cancelling headphones for superior audio.",
+    "details": "Enjoy immersive sound with adaptive active noise cancellation, long battery life, and a comfortable over-ear fit for all-day listening.",
+    "specs": [
+      "40-hour battery life",
+      "Bluetooth 5.2 connectivity",
+      "Soft memory foam ear cushions",
+      "Built-in microphone with voice assistant support"
+    ],
+    "category": "Audio",
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "delivery": "Free 2-day delivery",
+    "tag": "Best Seller"
+  },
+  {
+    "id": 2,
+    "name": "Luxury Watch",
+    "price": 6999,
+    "description": "Elegant wristwatch with premium leather strap.",
+    "details": "Water-resistant design with Swiss-inspired movement and a polished finish that suits both formal and casual wear.",
+    "specs": [
+      "42mm stainless steel case",
+      "Genuine leather strap",
+      "Water resistant up to 50m",
+      "Mineral crystal glass"
+    ],
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "delivery": "Free delivery by tomorrow",
+    "tag": "Luxury"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Mouse",
+    "price": 2499,
+    "description": "High-precision RGB gaming mouse with ergonomic design.",
+    "details": "Features customizable DPI, programmable buttons, and a soft grip shell for marathon gaming sessions.",
+    "specs": [
+      "6 programmable buttons",
+      "RGB lighting effects",
+      "Up to 16,000 DPI",
+      "Ergonomic grip for right-handed users"
+    ],
+    "category": "Gaming",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.6,
+    "delivery": "Free 3-day delivery",
+    "tag": "Trending"
+  },
+  {
+    "id": 4,
+    "name": "Smart Speaker",
+    "price": 3499,
+    "description": "Voice-controlled smart speaker with rich sound.",
+    "details": "Packed with Wi-Fi, smart assistant support, and multi-room audio for hands-free control and clear playback.",
+    "specs": [
+      "Wi-Fi and Bluetooth connectivity",
+      "Voice assistant compatible",
+      "360° sound output",
+      "Multi-room audio support"
+    ],
+    "category": "Home",
+    "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.5,
+    "delivery": "Free delivery by Monday",
+    "tag": "Hot Deal"
+  },
+  {
+    "id": 5,
+    "name": "Fitness Tracker",
+    "price": 2999,
+    "description": "Track your workouts, heart rate, and sleep.",
+    "details": "Stay on top of your wellness with real-time heart rate monitoring, activity reminders, and sleep analysis.",
+    "specs": [
+      "24/7 heart rate tracking",
+      "Sleep quality monitoring",
+      "Step and calorie tracking",
+      "Water resistant up to 30m"
+    ],
+    "category": "Health",
+    "image": "https://images.unsplash.com/photo-1526401485004-b5693631efac?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.4,
+    "delivery": "Free 2-day delivery",
+    "tag": "New Arrival"
+  },
+  {
+    "id": 6,
+    "name": "Travel Backpack",
+    "price": 2599,
+    "description": "Durable carry-on backpack with laptop pouch.",
+    "details": "Designed for travel with a padded laptop compartment, water-resistant fabric, and multiple organization pockets.",
+    "specs": [
+      "15.6-inch laptop compartment",
+      "Water-resistant polyester",
+      "Front quick-access pocket",
+      "Adjustable padded straps"
+    ],
+    "category": "Travel",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "delivery": "Free shipping",
+    "tag": "Best Seller"
+  },
+  {
+    "id": 7,
+    "name": "Smartwatch Pro",
+    "price": 5299,
+    "description": "Fitness-focused smartwatch with blood oxygen and GPS.",
+    "details": "Monitor workouts, sleep cycles, and stress levels while staying connected with notifications and voice assistant support.",
+    "specs": [
+      "Built-in GPS",
+      "Blood oxygen sensor",
+      "7-day battery life",
+      "Message and call alerts"
+    ],
+    "category": "Wearables",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.6,
+    "delivery": "Free 2-day delivery",
+    "tag": "New Arrival"
+  },
+  {
+    "id": 8,
+    "name": "Wireless Charger",
+    "price": 1399,
+    "description": "Fast Qi wireless charger for phones and earbuds.",
+    "details": "Compact charging pad with overcharge protection and rapid power delivery for compatible devices.",
+    "specs": [
+      "15W fast charging",
+      "Anti-slip surface",
+      "Overheat protection",
+      "Compatible with Qi devices"
+    ],
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.5,
+    "delivery": "Free delivery",
+    "tag": "Hot Deal"
+  },
+  {
+    "id": 9,
+    "name": "Noise-Cancelling Earbuds",
+    "price": 4599,
+    "description": "True wireless earbuds with premium sound.",
+    "details": "Experience crisp audio, long battery life, and adaptive noise cancellation for commuting and workouts.",
+    "specs": [
+      "30-hour total battery life",
+      "Active noise cancellation",
+      "IPX4 sweat resistance",
+      "Touch controls"
+    ],
+    "category": "Audio",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "delivery": "Free 2-day delivery",
+    "tag": "Best Seller"
+  },
+  {
+    "id": 10,
+    "name": "Home Security Camera",
+    "price": 4899,
+    "description": "1080p smart security camera with night vision.",
+    "details": "Keep your home safe with motion alerts, two-way audio, and secure cloud storage options.",
+    "specs": [
+      "1080p HD video",
+      "Night vision",
+      "2-way audio",
+      "Motion detection alerts"
+    ],
+    "category": "Home",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "rating": 4.6,
+    "delivery": "Free delivery by Monday",
+    "tag": "Trending"
+  }
+]

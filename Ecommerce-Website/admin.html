@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <h2>Admin</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="login.html">Login</a>
+      <a href="admin.html" class="active">Admin</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Admin Dashboard</h1>
+      <p>Add new products to the store catalog quickly and securely.</p>
+    </div>
+  </section>
+
+  <div class="card">
+    <h3>Add Product</h3>
+    <input id="name" placeholder="Product Name" />
+    <input id="price" placeholder="Price" />
+    <input id="desc" placeholder="Description" />
+    <input id="category" placeholder="Category" />
+    <input id="image" placeholder="Image URL" />
+    <button id="addBtn">Add Product</button>
+    <div id="addResult" class="notice-box"></div>
+  </div>
+
+  <script>
+    document.getElementById('addBtn').addEventListener('click', async () => {
+      const name = document.getElementById('name').value.trim();
+      const price = document.getElementById('price').value.trim();
+      const description = document.getElementById('desc').value.trim();
+      const category = document.getElementById('category').value.trim();
+      const image = document.getElementById('image').value.trim();
+      if (!name || !price) {
+        alert('Name and price required');
+        return;
+      }
+      const res = await fetch('/api/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, price, description, category, image }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        document.getElementById('addResult').innerText = 'Product added: ' + data.name;
+      } else {
+        document.getElementById('addResult').innerText = 'Error: ' + (data.message || res.status);
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
